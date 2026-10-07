@@ -1,4 +1,4 @@
-function ProductCard({ product, showActions, onEdit, onDelete }) { 
+function ProductCard({ product, showActions, onEdit, onDelete }) {
     return (
         <article className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition duration-300 hover:translate-y-1 hover:shadow-xl">
             <div className="relative aspect-4/3 overflow-hidden">
@@ -8,7 +8,7 @@ function ProductCard({ product, showActions, onEdit, onDelete }) {
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <span className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-sm font-bold text-indigo-600 shadow">
-                    Pesos {Number(product.price).toLocaleString()}
+                    ₱ {Number(product.price).toLocaleString()}
                 </span>
             </div>
             <div className="p-5">
@@ -20,15 +20,15 @@ function ProductCard({ product, showActions, onEdit, onDelete }) {
                 </p>
 
                 {showActions && (
-                    <div>
+                    <div className='mt-4 flex gap-2'>
                         <button
-                            onClick={()=> onEdit(product)}
+                            onClick={() => onEdit(product)}
                             className="flex-1 rounded-lg bg-slate-100 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200"
                         >
                             Edit
                         </button>
                         <button
-                            onClick={()=> onDelete(product._id)}
+                            onClick={() => onDelete(product._id)}
                             className="flex-1 rounded-lg bg-red-500 py-2 text-sm font-medium text-white hover:bg-red-600"
                         >
                             Delete
@@ -39,5 +39,5 @@ function ProductCard({ product, showActions, onEdit, onDelete }) {
         </article>
     )
 }
-    
-    export default ProductCard;
+
+export default ProductCard;

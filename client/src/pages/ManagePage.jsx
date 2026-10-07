@@ -1,9 +1,9 @@
 import ProductForm from "../components/ProductForm";
 import ProductGrid from "../components/ProductGrid";
 
-function ManagePage({products, editingProduct, onSave, onCancel, onEdit, onDelete}){
+function ManagePage({ products, editingProduct, onSave, onCancel, onEdit, onDelete }) {
     return (
-        <main className="mx-auto max-w-6xl items-start gap-8 px-6 py-10 lg:grid-cols-[360x_fr]">
+        <main className="mx-auto grid max-w-6xl items-start gap-8 px-6 py-10 lg:grid-cols-[360px_1fr]">
             <ProductForm
                 key={editingProduct?._id || "new"}
                 editingProduct={editingProduct}
@@ -19,7 +19,7 @@ function ManagePage({products, editingProduct, onSave, onCancel, onEdit, onDelet
             </section>
         </main>
     )
-    
+
 }
 
 export default ManagePage
