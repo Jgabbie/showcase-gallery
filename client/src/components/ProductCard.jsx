@@ -1,6 +1,6 @@
 function ProductCard({ product, showActions, onEdit, onDelete }) {
     return (
-        <article className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition duration-300 hover:translate-y-1 hover:shadow-xl">
+        <article className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
             <div className="relative aspect-4/3 overflow-hidden">
                 <img
                     src={product.image}
